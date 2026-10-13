@@ -24,7 +24,7 @@ public sealed class ThreadsOpenApiClientUtil : IThreadsOpenApiClientUtil
         {
             HttpClient httpClient = await httpClientUtil.Get(token).NoSync();
 
-            var apiKey = configuration.GetValueStrict<string>("Threads:AccessToken");
+            var apiKey = configuration.GetStringStrict("Threads:AccessToken");
             string authHeaderName = configuration["Threads:AuthHeaderName"] ?? "Authorization";
             string authHeaderValueTemplate = configuration["Threads:AuthHeaderValueTemplate"] ?? "Bearer {token}";
             string authHeaderValue = authHeaderValueTemplate.Replace("{token}", apiKey, StringComparison.Ordinal);
