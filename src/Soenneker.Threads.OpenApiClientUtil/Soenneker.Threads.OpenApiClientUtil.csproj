@@ -45,7 +45,7 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="4.0.56" />
-        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.875" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.879" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\..\soenneker.threads.httpclients\src\Soenneker.Threads.HttpClients\Soenneker.Threads.HttpClients.csproj" Condition="Exists('..\..\..\soenneker.threads.httpclients\src\Soenneker.Threads.HttpClients\Soenneker.Threads.HttpClients.csproj')" />
