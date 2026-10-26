@@ -3,6 +3,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net11.0</TargetFramework>
+        <Features Condition="'$(TargetFramework)' == 'net11.0'">$(Features);runtime-async=on</Features>
         <Nullable>enable</Nullable>
         <Platforms>AnyCPU</Platforms>
         <NoWarn>$(NoWarn);1591</NoWarn>
@@ -45,7 +46,7 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="4.0.56" />
-        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="11.0.885" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="11.0.886" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\..\soenneker.threads.httpclients\src\Soenneker.Threads.HttpClients\Soenneker.Threads.HttpClients.csproj" Condition="Exists('..\..\..\soenneker.threads.httpclients\src\Soenneker.Threads.HttpClients\Soenneker.Threads.HttpClients.csproj')" />
